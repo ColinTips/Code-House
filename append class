@@ -1,0 +1,6 @@
+// append box-shadow to widget-text
+const sb = document.querySelector('.siderbar');
+const widgetext = sb.querySelectorAll('.widget_text');
+if (widgetext) {
+  $(".widget_text").addClass("box-shadow");
+}
