@@ -1,0 +1,24 @@
+		// StickUp2
+		var app = function(window, document, $) {
+		  var docElem = document.documentElement,
+			_userAgentInit = function() {
+			  docElem.setAttribute("data-useragent", navigator.userAgent)
+			}, _init = function() {
+			  _userAgentInit(), $(".header-main").stickUp({
+				scrollHide: !0,
+				zIndex: 100
+			  }), $(".widget-nav").stickUp({
+				keepInWrapper: !0,
+				topMargin: 10,
+				lazyHeight: $(".header-main").outerHeight(),
+				zIndex: 100,
+				wrapperSelector:".siderbar"
+			  })
+			};
+		  return {
+			init: _init
+		  }
+		}(window, document, jQuery);
+		! function() {
+		  app.init()
+		}();
